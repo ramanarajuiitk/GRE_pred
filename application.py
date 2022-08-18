@@ -4,7 +4,8 @@
 from flask import Flask, render_template, request
 from flask_cors import cross_origin
 import pickle
-
+import os
+from wsgiref import simple_server
 application = Flask(__name__) # initializing a flask app
 # app=application
 @application.route('/',methods=['GET'])  # route to display the home page
@@ -45,6 +46,13 @@ def index():
 
 
 
+
+
+
+port = int(os.getenv("PORT",5000))
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port=8001, debug=True)
-	application.run(debug=True) # running the app
+    host = '0.0.0.0'
+    #port = 5000
+    httpd = simple_server.make_server(host, port, application)
+    # print("Serving on %s %d" % (host, port))
+    httpd.serve_forever()

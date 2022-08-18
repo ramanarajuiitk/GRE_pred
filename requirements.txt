@@ -7,10 +7,11 @@ itsdangerous
 Jinja2
 joblib
 numpy
-scikit-learn==1.1.1
+scikit-learn
 scipy
 six
 Werkzeug
 pandas
+pytest
 
 
