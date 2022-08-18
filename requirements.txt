@@ -1,0 +1,16 @@
+certifi
+Click
+Flask
+Flask-Cors
+gunicorn
+itsdangerous
+Jinja2
+joblib
+numpy
+scikit-learn==1.1.1
+scipy
+six
+Werkzeug
+pandas
+
+
