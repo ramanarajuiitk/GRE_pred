@@ -6,7 +6,7 @@ import os
 
 class TestToPerform(unittest.TestCase):
     def setUp(self):
-        self.app = app.test_client()
+        self.app = application.test_client()
 
     def tearDown(self):
         pass
